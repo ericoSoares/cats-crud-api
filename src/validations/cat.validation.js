@@ -1,5 +1,4 @@
 const Joi = require('joi');
-const { password, objectId } = require('./custom.validation');
 
 const createCat = {
   body: Joi.object().keys({
@@ -23,13 +22,13 @@ const getCats = {
 
 const getCat = {
   params: Joi.object().keys({
-    catId: Joi.string().custom(objectId),
+    catId: Joi.string(),
   }),
 };
 
 const updateCat = {
   params: Joi.object().keys({
-    catId: Joi.required().custom(objectId),
+    catId: Joi.required(),
   }),
   body: Joi.object()
     .keys({
@@ -44,7 +43,7 @@ const updateCat = {
 
 const deleteCat = {
   params: Joi.object().keys({
-    catId: Joi.string().custom(objectId),
+    catId: Joi.string(),
   }),
 };
 
