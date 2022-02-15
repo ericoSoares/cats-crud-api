@@ -1,7 +1,6 @@
 # Cats CRUD API
 
-Environment
-The application was developed and tested on XUbuntu 18.04
+The application was developed and tested on XUbuntu 18.04 using Docker.
 
 Executing
 ```
